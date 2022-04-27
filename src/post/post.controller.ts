@@ -22,6 +22,6 @@ export class PostController {
 
   @Get(':postId')
   getPost(@Param('postId') postId: string) {
-    return this.postService.getPost(postId)
+    return this.postService.getPost(postId);
   }
 }
