@@ -1,0 +1,131 @@
+{
+    "users": [
+        {
+            "firstname": "Will",
+            "lastname": "Smith",
+            "id": "9db5b68a-c2a7-4930-8544-3a06eb765c61",
+            "createdAt": "2022-04-27T13:15:43.969Z"
+        },
+        {
+            "firstname": "Chirs",
+            "lastname": "Patt",
+            "id": "5a70aede-5004-476a-acc6-9fc672a18261",
+            "createdAt": "2022-04-27T13:16:13.437Z"
+        },
+        {
+            "firstname": "Elon",
+            "lastname": "Musk",
+            "id": "d7c537e8-57e0-4da0-aa6a-43161fe9e955",
+            "createdAt": "2022-04-27T13:16:47.983Z"
+        },
+        {
+            "firstname": "Steve",
+            "lastname": "Jobs",
+            "id": "d8263133-3444-4de0-9e9b-467d822ab47f",
+            "createdAt": "2022-04-27T13:17:36.564Z"
+        },
+        {
+            "firstname": "Bill",
+            "lastname": "Gates",
+            "id": "9f92a448-c1f9-42f2-babe-ba886786e34e",
+            "createdAt": "2022-04-27T13:17:48.126Z"
+        },
+        {
+            "firstname": "Joe",
+            "lastname": "Biden",
+            "id": "30d31181-a3dd-4358-a24d-4ac1d33d508a",
+            "createdAt": "2022-04-27T13:17:56.295Z"
+        },
+        {
+            "firstname": "Hrithik",
+            "lastname": "Roshan",
+            "id": "49477161-25de-492d-9b78-58f82857b71c",
+            "createdAt": "2022-04-27T13:18:05.544Z"
+        },
+        {
+            "firstname": "Shahrukh",
+            "lastname": "Khan",
+            "id": "a0b46a74-f687-4efc-9f42-da84cf7ce78c",
+            "createdAt": "2022-04-27T13:18:16.446Z"
+        }
+    ],
+    "posts": [
+        {
+            "title": "Title1: Post from Will Smith",
+            "body": "Body1: Post from Will Smith",
+            "tags": [
+                "Movies",
+                "Ganster"
+            ],
+            "authorId": "9db5b68a-c2a7-4930-8544-3a06eb765c61",
+            "id": "75f8eb23-af2d-4c7f-9030-bc162e8b2e63",
+            "createdAt": "2022-04-27T13:36:46.505Z"
+        },
+        {
+            "title": "Title1: Post from Steve Jobs",
+            "body": "Body1: Post from Steve Jobs",
+            "tags": [
+                "Apple",
+                "iPhone"
+            ],
+            "authorId": "d8263133-3444-4de0-9e9b-467d822ab47f",
+            "id": "8429312a-e480-447f-9a7e-48b87af54a47",
+            "createdAt": "2022-04-27T13:40:52.896Z"
+        },
+        {
+            "title": "Title2: Post from Steve Jobs",
+            "body": "Body2: Post from Steve Jobs",
+            "tags": [
+                "Apple",
+                "iPad"
+            ],
+            "authorId": "d8263133-3444-4de0-9e9b-467d822ab47f",
+            "id": "c66c9110-73dd-4738-aa0c-de1139262b85",
+            "createdAt": "2022-04-27T13:41:07.267Z"
+        },
+        {
+            "title": "Title3: Post from Steve Jobs",
+            "body": "Body3: Post from Steve Jobs",
+            "tags": [
+                "Apple",
+                "Design Phylosophy"
+            ],
+            "authorId": "d8263133-3444-4de0-9e9b-467d822ab47f",
+            "id": "0e57c641-8652-4aaf-8b17-1ff7c86f48c8",
+            "createdAt": "2022-04-27T13:41:34.151Z"
+        },
+        {
+            "title": "Title4: Post from Steve Jobs",
+            "body": "Body4: Post from Steve Jobs",
+            "tags": [
+                "Apple",
+                "Nerds"
+            ],
+            "authorId": "d8263133-3444-4de0-9e9b-467d822ab47f",
+            "id": "d87dace5-6b7a-4db2-8bb6-cfe4e6463c1f",
+            "createdAt": "2022-04-27T13:41:45.501Z"
+        },
+        {
+            "title": "Title5: Post from Steve Jobs",
+            "body": "Body5: Post from Steve Jobs",
+            "tags": [
+                "Apple",
+                "iWatch"
+            ],
+            "authorId": "d8263133-3444-4de0-9e9b-467d822ab47f",
+            "id": "5e7f8737-1e06-43e5-8ab9-748c96946b01",
+            "createdAt": "2022-04-27T13:41:58.286Z"
+        },
+        {
+            "title": "Title6: Post from Steve Jobs",
+            "body": "Body6: Post from Steve Jobs",
+            "tags": [
+                "Apple",
+                "Addiction to tech"
+            ],
+            "authorId": "d8263133-3444-4de0-9e9b-467d822ab47f",
+            "id": "97d94356-8714-4098-a6b1-efba8fc38b85",
+            "createdAt": "2022-04-27T13:42:14.226Z"
+        }
+    ]
+}
