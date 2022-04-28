@@ -5,26 +5,30 @@ import * as fs from 'fs';
 
 import { Post } from 'src/post/post.model';
 import { User } from './user.model';
+import { UserGateway } from './user.gateway';
 
 @Injectable()
 export class UserService {
   private readonly logger = new Logger(UserService.name);
+
+  constructor(private readonly userGateway: UserGateway) {}
+
   // Runs every 45 sec. This is for trial.
-  @Cron('30 * * * * *')
-  removeInactiveUsers(): void {
-    this.logger.debug('Triggered removeOveractiveUserPosts');
-    const db = this.readLocalDb();
-    const oldUsers = this.getOldUsers(db);
-    this.logger.debug('Old users: ', JSON.stringify(oldUsers));
-    const inactiveUsers = oldUsers.filter((user) => {
-      const userPosts = db.posts.filter((post) => post.authorId === user.id);
-      return userPosts.length === 0;
-    });
-    const inactiveUserIds = inactiveUsers.map((user) => user.id);
-    this.logger.debug('Inactive userIds: ', inactiveUserIds);
-    db.users = db.users.filter((user) => !inactiveUserIds.includes(user.id));
-    this.writeLocalDb(db);
-  }
+  // @Cron('30 * * * * *')
+  // removeInactiveUsers(): void {
+  //   this.logger.debug('Triggered removeOveractiveUserPosts');
+  //   const db = this.readLocalDb();
+  //   const oldUsers = this.getOldUsers(db);
+  //   this.logger.debug('Old users: ', JSON.stringify(oldUsers));
+  //   const inactiveUsers = oldUsers.filter((user) => {
+  //     const userPosts = db.posts.filter((post) => post.authorId === user.id);
+  //     return userPosts.length === 0;
+  //   });
+  //   const inactiveUserIds = inactiveUsers.map((user) => user.id);
+  //   this.logger.debug('Inactive userIds: ', inactiveUserIds);
+  //   db.users = db.users.filter((user) => !inactiveUserIds.includes(user.id));
+  //   this.writeLocalDb(db);
+  // }
 
   // Helps create the db.json locally, which can be then pushed to github.
   // The GET user and GET users API will get this data from the faked API endpoint
@@ -42,6 +46,7 @@ export class UserService {
     const createdUser = new User(firstname, lastname);
     db.users.push(createdUser);
     this.writeLocalDb(db);
+    this.userGateway.sendUserCreatedEvent(createdUser);
     return createdUser;
   }
 
